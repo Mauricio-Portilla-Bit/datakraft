@@ -1,0 +1,18 @@
+[package]
+name = "datakraft"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ndarray = "0.15"        # Para cálculos numéricos
+rand = "0.8"            # Para funciones de probabilidad
+statrs = "0.16"         # Librería de estadística
+rustfft = "6.1"         # FFT en Rust
+serde = { version = "1.0", features = ["derive"] } # Para serialización
+
+[dependencies.pyo3]
+version = "0.20"
+features = ["extension-module"]
+
+[lib]
+crate-type = ["cdylib"]  # Necesario para exportar a Python
